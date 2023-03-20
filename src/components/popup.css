@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+.popup {
+    height: fit-content;
+    width: 50%;
+    background-color: #020202;
+    border-radius: 10px;
+    position: fixed;
+    top: 25%;
+    right: 25%;
+    z-index: 999;
+    -webkit-box-shadow: 0px 0px 27px 7px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 0px 0px 27px 7px rgba(0, 0, 0, 0.64);
+    box-shadow: 0px 0px 27px 7px rgba(0, 0, 0, 0.64);
+    padding: 20px;
+    overflow-y: auto; /* Add this line */
+  }
+  .popup::-webkit-scrollbar{
+    display:none;
+}
+
+.popup-header{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    border-bottom: 2px solid black;
+}
+.popup-header .favorite-btn {
+    border: 2px solid wheat;
+    background: none;
+    color: wheat;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: #020202;
+    transition: all 0.2s ease-in-out;
+  }
+  .popup-header .favorite-btn:hover {
+    background: wheat;
+    color: #020202;
+  }
+
+.popup-detail .header {
+    color: wheat;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+.popup-header span {
+    color: wheat;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 20px;
+  }
+.popup-detail {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    margin: 0 10px 20px 10px;
+    justify-content: space-between;
+  }
+.popup-detail span{
+ color: white;
+}
+.movie-description {
+    color: white;
+    padding: 20px;
+    font-family: monospace;
+    font-size: 16px;
+    font-family: "Red Hat Display", sans-serif;
+  }
+
+.popup h3{
+    color: white;
+    padding: 0 20px;
+    font-family: "Red Hat Display", sans-serif;
+}
+/* Smaller Screen version */
+@media (max-width: 768px) {
+    .popup {
+      top: 10%;
+      left: 0;
+      width: 100%;
+      max-height: 80%;
+      overflow-y: auto;
+    }
+    .popup-header {
+      padding: 0 10px 0 10px;
+    }
+    .popup-header .header {
+      font-size: 18px;
+    }
+    .popup h3 {
+      padding: 0 10px;
+      font-size: 16px;
+      font-weight: bolder;
+      font-family: "Red Hat Display", sans-serif;
+      
+    }
+    .popup-detail {
+      padding: 10px;
+      margin: 0;
+    }
+    .popup-detail .header {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .movie-description {
+      overflow-y: auto;
+      max-height: calc(100vh - 50vh);
+      padding: 20px;
+      font-family: "Red Hat Display", sans-serif;
+    }
+  }
